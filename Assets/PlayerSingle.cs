@@ -7,7 +7,7 @@ public class PlayerSingle : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
@@ -17,6 +17,7 @@ public class PlayerSingle : MonoBehaviour
 
     [SerializeField] BoxCollider2D col;
     [SerializeField] GameObject MainMenu;
+    [SerializeField] Factory factory;
 
     public int tailLength = 2;
     public float moveTime = 0.75f;
@@ -60,6 +61,7 @@ public class PlayerSingle : MonoBehaviour
         {
             this.gameObject.transform.position += dir;
             timer = 0f;
+            factory.Spawn("tail");
         }
     }
 
@@ -81,7 +83,10 @@ public class PlayerSingle : MonoBehaviour
         }
         else
         {
+            Destroy(collision.gameObject);
             tailLength++;
+            factory.Spawn("apple");
+            Debug.Log("Apple");
         }
     }
 

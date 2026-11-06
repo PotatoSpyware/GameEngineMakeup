@@ -33,5 +33,5 @@ providing it with a method that spawns the required object using a string passed
 
 # References
 ---
-<!-- Identify sources used to create any gameplay logic or programming pattern
-implementations. -->
+https://gamedev.net/blogs/entry/2277680-factory-design-pattern-in-unity/?__cf_chl_tk=ZCdM9Qh_PiVQ5anuUr5N_kuGG6awdysRrB8Heb5AWvg-1793923747-1.0.1.1-l1mmjxuNh5YVxsAJRJxe6ncBHT.VU8Xi8OvPCFlWDW4
+Used to double check my execution of a factory pattern.

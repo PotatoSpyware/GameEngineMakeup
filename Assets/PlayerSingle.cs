@@ -15,6 +15,9 @@ public class PlayerSingle : MonoBehaviour
         }
     }
 
+    [SerializeField] BoxCollider2D col;
+    [SerializeField] GameObject MainMenu;
+
     public int tailLength = 2;
     public float moveTime = 0.75f;
     private float timer = 0f;
@@ -68,5 +71,19 @@ public class PlayerSingle : MonoBehaviour
     private void setInstance(PlayerSingle inst)
     {
         instance = inst;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag != "Apple")
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Time.timeScale = 0f;
+        MainMenu.gameObject.SetActive(true);
     }
 }

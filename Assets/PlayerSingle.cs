@@ -63,7 +63,7 @@ public class PlayerSingle : MonoBehaviour
         }
     }
 
-    public PlayerSingle getInstance()
+    public static PlayerSingle getInstance()
     {
         return instance;
     }

@@ -14,7 +14,7 @@ public class Factory : MonoBehaviour
 
         else if (name == "apple")
         {
-            Vector3 pos = new Vector3(Random.Range(-8, 8), Random.Range(-4, 4));
+            Vector3 pos = new Vector3(Random.Range(-32, 32)/4, Random.Range(-16, 16)/4);
             Quaternion rot = new Quaternion();
             Instantiate(apple, pos, rot);
         }

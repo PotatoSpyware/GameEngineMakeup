@@ -79,6 +79,10 @@ public class PlayerSingle : MonoBehaviour
         {
             Die();
         }
+        else
+        {
+            tailLength++;
+        }
     }
 
     private void Die()
